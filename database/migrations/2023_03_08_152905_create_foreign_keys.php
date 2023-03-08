@@ -10,13 +10,13 @@ class CreateForeignKeys extends Migration {
 	{
 		Schema::table('trips', function(Blueprint $table) {
 			$table->foreign('start_station_id')->references('id')->on('stations')
-						->onDelete('set null')
-						->onUpdate('set null');
+						->onDelete('cascade')
+						->onUpdate('cascade');
 		});
 		Schema::table('trips', function(Blueprint $table) {
 			$table->foreign('end_station_id')->references('id')->on('stations')
-						->onDelete('set null')
-						->onUpdate('set null');
+						->onDelete('cascade')
+						->onUpdate('cascade');
 		});
 		Schema::table('buses', function(Blueprint $table) {
 			$table->foreign('bus_id')->references('id')->on('trips')

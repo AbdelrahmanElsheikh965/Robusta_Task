@@ -11,8 +11,8 @@ class CreateTripsTable extends Migration {
 		Schema::create('trips', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
-			$table->integer('start_station_id')->unsigned()->nullable();
-			$table->integer('end_station_id')->unsigned()->nullable();
+			$table->integer('start_station_id')->unsigned();
+			$table->integer('end_station_id')->unsigned();
 			$table->timestamps();
 		});
 	}
