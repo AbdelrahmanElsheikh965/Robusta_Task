@@ -1,0 +1,1005 @@
+{
+	"info": {
+		"_postman_id": "f37b98ca-28a9-4805-bb93-5458932b8a27",
+		"name": "Robusta_Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ahmed",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ahmed@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ahmedahmed",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "ahmedahmed",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Validation error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ahmed",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "ahmed@mailss",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "ahmedahmeds",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "ahmedahmed",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:11:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:11:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": [\n        \"The email field must be a valid email address.\"\n    ],\n    \"password\": [\n        \"The password field confirmation does not match.\"\n    ]\n}"
+						},
+						{
+							"name": "Sucessfully registered user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ahmed",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "ahmed@mail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "ahmedahmed",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "ahmedahmed",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:11:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:11:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"09ca60311a3790504ace55fdab443e23\",\n    \"user_data\": {\n        \"name\": \"ahmed\",\n        \"email\": \"ahmed@mail.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ahmed@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ahmedahmed",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Wrong credentials",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@mail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "ahmedahmed",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:12:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:12:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\"Incorrect Data!\"]"
+						},
+						{
+							"name": "Sucessful login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ahmed@mail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "ahmedahmed",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:12:49 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:12:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"09ca60311a3790504ace55fdab443e23\",\n    \"user_data\": {\n        \"name\": \"ahmed\",\n        \"email\": \"ahmed@mail.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ali@mail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/reset-password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reset-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "An email sent to the user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@mail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/reset-password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"reset-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:13:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:13:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "\"Your pin code is ready check your email inbox!\""
+						}
+					]
+				},
+				{
+					"name": "Create New Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ali@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "pin_code",
+									"value": "225652",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/create-new-password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"create-new-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Validation error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "pin_code",
+											"value": "225652",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123123",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "54545454",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/create-new-password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"create-new-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:07:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:07:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": [\n        \"The email field is required.\"\n    ],\n    \"password\": [\n        \"The password field confirmation does not match.\"\n    ]\n}"
+						},
+						{
+							"name": "Sucessfully updated password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@mail.com",
+											"type": "text"
+										},
+										{
+											"key": "pin_code",
+											"value": "225652",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123123",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123123123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/create-new-password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"create-new-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:10:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 17:10:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "\"Your Password has been updated successfully\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "List Available Seats",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_station_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "end_station_id",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/list-available-seats?api_token=c8b82de1594fcac2e70d0c9aeb3ed338",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"list-available-seats"
+					],
+					"query": [
+						{
+							"key": "api_token",
+							"value": "c8b82de1594fcac2e70d0c9aeb3ed338"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful - available seats",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_station_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "end_station_id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/list-available-seats?api_token=c8b82de1594fcac2e70d0c9aeb3ed338",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"list-available-seats"
+							],
+							"query": [
+								{
+									"key": "api_token",
+									"value": "c8b82de1594fcac2e70d0c9aeb3ed338"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Mar 2023 17:06:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Mar 2023 17:06:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Available seats are \": [\n        {\n            \"name\": \"A2\"\n        },\n        {\n            \"name\": \"A4\"\n        },\n        {\n            \"name\": \"C1\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Book a seat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_station_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "end_station_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "seatName",
+							"value": "C1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/book-a-seat?api_token=c8b82de1594fcac2e70d0c9aeb3ed338",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"book-a-seat"
+					],
+					"query": [
+						{
+							"key": "api_token",
+							"value": "c8b82de1594fcac2e70d0c9aeb3ed338"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
