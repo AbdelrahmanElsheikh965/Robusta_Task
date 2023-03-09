@@ -10,7 +10,7 @@ class CreateBusesTable extends Migration {
 	{
 		Schema::create('buses', function(Blueprint $table) {
 			$table->integer('trip_id')->primary()->unsigned();
-			$table->integer('seats');
+			$table->integer('seats')->nullable();
 			$table->timestamps();
 		});
 	}

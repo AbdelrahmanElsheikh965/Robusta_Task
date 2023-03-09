@@ -18,7 +18,20 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Auth Routes
 Route::post('register', 'App\Http\Controllers\Api\AuthController@register');
 Route::post('login', 'App\Http\Controllers\Api\AuthController@login');
 Route::post('reset-password', 'App\Http\Controllers\Api\AuthController@resetPassword');
 Route::post('create-new-password', 'App\Http\Controllers\Api\AuthController@createNewPassword');
+
+// List available seats
+Route::post('list-available-seats', 'App\Http\Controllers\Api\SeatController@listAvailableSeats')->middleware('auth:api');
+Route::post('book-a-seat', 'App\Http\Controllers\Api\SeatController@bookASeat')->middleware('auth:api');
+
+
+
+
+
+
+
+
