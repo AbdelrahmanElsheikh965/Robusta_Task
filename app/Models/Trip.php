@@ -23,7 +23,7 @@ class Trip extends Model
 
     public function bus()
     {
-        return $this->hasOne('App\Models\Bus');
+        return $this->hasOne('App\Models\Bus', 'trip_id');
     }
 
 }

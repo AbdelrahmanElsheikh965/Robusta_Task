@@ -20,11 +20,6 @@ class resetEmail extends Mailable
     {
         $this->mailData = $mailData;
     }
-//
-//    public function build()
-//    {
-//        return $this->subject('Don\'t share this information with anybody!')->view('email');
-//    }
 
     /**
      * Get the message envelope.

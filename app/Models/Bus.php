@@ -13,12 +13,12 @@ class Bus extends Model
 
     public function trip()
     {
-        return $this->belongsTo('App\Models\Trip');
+        return $this->belongsTo('App\Models\Trip', 'trip_id');
     }
 
-    public function users()
+    public function seats()
     {
-        return $this->hasMany('App\Models\User');
+        return $this->hasMany('App\Models\Seat');
     }
 
 }
