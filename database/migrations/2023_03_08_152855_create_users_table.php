@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration {
 			$table->string('password');
 			$table->string('api_token')->nullable();
 			$table->string('pin_code')->nullable();
-			$table->integer('bus_id')->nullable();
+			$table->integer('bus_id')->unsigned()->nullable();
 			$table->timestamps();
 		});
 	}

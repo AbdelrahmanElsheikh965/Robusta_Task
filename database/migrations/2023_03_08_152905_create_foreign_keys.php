@@ -23,6 +23,11 @@ class CreateForeignKeys extends Migration {
 						->onDelete('cascade')
 						->onUpdate('cascade');
 		});
+        Schema::table('users', function(Blueprint $table) {
+            $table->foreign('bus_id')->references('bus_id')->on('buses')
+                ->onDelete('set null')
+                ->onUpdate('set null');
+        });
 	}
 
 	public function down()
@@ -36,5 +41,8 @@ class CreateForeignKeys extends Migration {
 		Schema::table('buses', function(Blueprint $table) {
 			$table->dropForeign('buses_bus_id_foreign');
 		});
+        Schema::table('users', function(Blueprint $table) {
+            $table->dropForeign('users_bus_id_foreign');
+        });
 	}
 }
