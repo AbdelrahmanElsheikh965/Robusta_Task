@@ -1,66 +1,91 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Hi, this is Robusta Task (bus-booking system)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+ 
+ 
+### User can register through the following  
+Link : domain.com/api/register  
+Parameters : name - email - password - password_confirmation  
+Method     : POST   
 
-## About Laravel
+### User can login through the following  
+Link : domain.com/api/login  
+Parameters : email - password  
+Method     : POST   
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### If user forgot the password, he can reset it using the following link
+ 
+Link : domain.com/api/reset-password  
+Parameters : email  
+Method     : POST   
+then an email with a pin code will be sent to user inbox if email is already registered.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### User can create the new password through the following link  
+Link : domain.com/api/create-new-password  
+Parameters : email - pin_code - password - password_confirmation  
+Method     : POST 
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### The bus-booking system has 2 Apis :
+   NOTE: A user must be logged in so he can provide api_token in the URL.
+#### 1) First one is for letting user list available seats on a specific trip  
+    
+   URL : domain.com/api/list-available-seats?api_token=  
+   Method : POST                                      
+   Parameters : start_station_id - end_station_id
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+   Returned Result : if there are available seats he can choose any seat name
+   and provide it as a parameter in the next request to book that seat.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+#### 2) Second one is for book a specific seat on a specific trip  
+    
+   URL: domain.com/api/book-a-seat?api_token=  
+   Method : POST                                      
+   Parameters : start_station_id - end_station_id, seatName   
+   Returned Result : 'Updated' if so.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Installation
 
-### Premium Partners
+import database file provided in phpMyAdmin through 'import' section.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Email
+adjust email credentials in .env file
+```python
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=465
+MAIL_USERNAME=yourmail@gmail.com
+MAIL_PASSWORD=yourPassword
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="yourmail@gmail.com"
+MAIL_FROM_NAME="${APP_NAME}"
+```
 
-## Contributing
+### Configure Database
+after creating database in localhost phpMyAdmin                    
+provide its name, username & password in .env file
+```python
+DB_DATABASE=DataBaseName
+DB_USERNAME=username
+DB_PASSWORD=password
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Run Migrations
 
-## Code of Conduct
+```python
+php artisan migrate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Run localserver
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```python
+php artisan serve
+```
+You can download potman collection from the attached files.  
+ 
+That's it :)
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[MIT](https://choosealicense.com/licenses/mit/)
